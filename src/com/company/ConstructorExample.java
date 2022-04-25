@@ -14,10 +14,8 @@ public class ConstructorExample {
     }
 
     public static void main(String[] args) {
-        new ConstructorExample();
-        new ConstructorExample(5);
-        new ConstructorExample(5,7.8f);
+       ConstructorExample c1 =  new ConstructorExample();
+        ConstructorExample c2 =  new ConstructorExample(5);
+        ConstructorExample c3 =  new ConstructorExample(5,7.8f);
     }
-
-
 }

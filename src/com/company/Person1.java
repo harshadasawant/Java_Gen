@@ -6,6 +6,9 @@ public class Person1 {
     private int age;
     private String name;
 
+    Person1(){
+        this.height = 5.5f;
+    }
     public void setWeight(float weight){
         this.weight = weight;
     }
@@ -41,13 +44,13 @@ public class Person1 {
         Person1 p1 = new Person1();
         p1.setAge(35);
         p1.setName("Harshada");
-        p1.setHeight(5.5f);
+
         p1.setWeight(55.0f);
 
         Person1 p2 = new Person1();
         p2.setAge(26);
         p2.setName("chhavi");
-        p2.setHeight(5.6f);
+
         p2.setWeight(50.0f);
 
         System.out.println(p1.getName());
