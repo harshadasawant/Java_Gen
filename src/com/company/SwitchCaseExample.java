@@ -10,7 +10,7 @@ public class SwitchCaseExample {
        switch (i){
            case 1 :
                System.out.println("Jan");
-
+                break;
            case 2:
                System.out.println("Feb");
                break;
