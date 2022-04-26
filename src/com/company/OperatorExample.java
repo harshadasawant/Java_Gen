@@ -4,7 +4,12 @@ public class OperatorExample {
 
 
     public static void main(String[] args) {
-     int x =10;
+        int x =10;
+//        int j = ++x;//pre increment
+        int j = x++;// post increment
+        System.out.println("j = " + j);
+
+
         System.out.println("x = " + x);
         System.out.println("x++ = " + x++);
         System.out.println("x = " + x);
