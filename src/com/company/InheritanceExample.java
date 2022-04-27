@@ -23,7 +23,7 @@ public class InheritanceExample extends C {
     }
     public static void main(String[] args) {
 
-        System.out.println(args[0]+"  "+args[1]);
+       System.out.println(args[0]+"  "+args[1]);
        C obj = new C();
        obj.add(3,4);
 //      obj.disaplay();
