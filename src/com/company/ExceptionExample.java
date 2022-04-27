@@ -5,12 +5,13 @@ import java.io.IOException;
 
 public class ExceptionExample {
 //checked
-    void checked() throws IOException{
-        throw new IOException();
+    void checked() throws MyException,IOException,Exception, ArithmeticException, RuntimeException{
+        throw new MyException();
     }
 //unchecked
     void checked1() throws ArithmeticException{
-        throw new ArithmeticException();
+//        throw new ArithmeticException();
+        System.out.println("from checked1");
     }
 
     void div(int a){
@@ -25,20 +26,35 @@ public class ExceptionExample {
            e.printStackTrace();
        }
         System.out.println("hello");
-//checked
+        
+       //checked
        try {
            obj.checked();
-       }catch(IOException e){
+       }catch(ArithmeticException e){
            e.printStackTrace();
        }
+       catch (RuntimeException e){
+           e.printStackTrace();
+       }
+       catch(Exception e){
+           e.printStackTrace();
+       }
+
 
 //       unchecked
        try {
            obj.checked1();
        }catch (ArithmeticException e){
            e.printStackTrace();
+       }finally{
+           System.out.println("from finally");
        }
 
         System.out.println("hello1");
     }
+}
+
+
+class MyException extends Exception {
+
 }
