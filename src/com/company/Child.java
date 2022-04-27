@@ -35,7 +35,7 @@ class Parent{
     }
 
 }
-//compiler will add defaukt constructor bydefault with below line
+//compiler will add default constructor by default with below line
 //Child(){
 //    super()
 //}
