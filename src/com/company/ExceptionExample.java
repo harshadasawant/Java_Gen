@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class ExceptionExample {
 //checked
-    void checked() throws MyException,IOException,Exception, ArithmeticException, RuntimeException{
+    void checked() throws MyException, ArithmeticException{
         throw new MyException();
     }
 //unchecked
@@ -26,21 +26,15 @@ public class ExceptionExample {
            e.printStackTrace();
        }
         System.out.println("hello");
-        
+
        //checked
        try {
            obj.checked();
        }catch(ArithmeticException e){
            e.printStackTrace();
-       }
-       catch (RuntimeException e){
+       }catch (MyException e){
            e.printStackTrace();
        }
-       catch(Exception e){
-           e.printStackTrace();
-       }
-
-
 //       unchecked
        try {
            obj.checked1();
@@ -55,6 +49,6 @@ public class ExceptionExample {
 }
 
 
-class MyException extends Exception {
+class MyException extends RuntimeException {
 
 }
