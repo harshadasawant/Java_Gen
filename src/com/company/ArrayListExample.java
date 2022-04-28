@@ -15,9 +15,11 @@ public class ArrayListExample {
         li.add("Ashwini");
         li.add(2,"Priya");
 
-        for(String s:li){
-            System.out.println("s =="+s);
-        }
+//        for(String s:li){
+//            System.out.println("s =="+s);
+//        }
+
+        Collections.sort(li);
         for(int i=0;i<li.size();i++){
             System.out.println("li.get(i) = " + li.get(i));
         }
@@ -63,6 +65,7 @@ public class ArrayListExample {
           }
       }
 
+
     static void StudentList(){
         List<Student1> li = new ArrayList<Student1>();
         li.add(new Student1(3,23,"harshada"));
@@ -95,7 +98,7 @@ public class ArrayListExample {
     public static void main(String[] args) {
 //        arrayFunction();
 //        LinkedListFunction();
-        PersonList();
+//        PersonList();
         StudentList();
         StudentSortList();
 

@@ -1,9 +1,6 @@
 package com.company;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class MapExample {
     static void MapMethod(){
@@ -38,8 +35,25 @@ public class MapExample {
         System.out.println("================By using for each===============");
         map.forEach((k,v)-> System.out.println(k +" "+v));
     }
-
+    static void TreeMap(){
+        TreeMap<Student2, String> map = new TreeMap<Student2, String>(new NameComparator());
+        map.put(new Student2(3,23,"Harshada"),"abc");
+        map.put(new Student2(2,34,"Daksh"),"pqr");
+        map.put(new Student2(1,3,"Teju"),"dfgf");
+        System.out.println("================By using for each===============");
+        map.forEach((k,v)-> System.out.println(k +" "+v));
+    }
+    static void TreeAgeMap(){
+        TreeMap<Student2, String> map = new TreeMap<Student2, String>(new AgeComparator());
+        map.put(new Student2(3,23,"Harshada"),"abc");
+        map.put(new Student2(2,34,"Daksh"),"pqr");
+        map.put(new Student2(1,3,"Teju"),"dfgf");
+        System.out.println("================By using for each===============");
+        map.forEach((k,v)-> System.out.println(k +" "+v));
+    }
     public static void main(String[] args) {
+        TreeMap();
+        TreeAgeMap();
         MapMethod();
     }
 }
